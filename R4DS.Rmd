@@ -1,0 +1,136 @@
+---
+title: "R4DS"
+author: "Blessing Ildefonso"
+output: html_document
+---
+# Introduction
+
+The **sun** is not ***shining***. We are having *classes* and it is noisy outside. However, the students are very eager to learn.
+
+### Continuation
+
+The noise continues.
+
+`Mathematics`
+
+Mathematics^2^~2~
+
+~~Mathematics~~
+
+Decision--Making
+
+Colors---Blue, Pink, Red, Yellow, Green.
+
+$A = \pi*r^{2}$
+
+$$E = mc^{2}$$
+
+>Mathematics
+
+# Header1 {#anchor}
+
+## Header 2 {#css_id}
+
+### Header 3 {.css_class}
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+\textbf{Tex ignored in HTML}
+<em>HTML ignored in pdfs</em>
+
+<http://www.rstudio.com>
+[link](www.rstudio.com)
+Jump to [Header 1](#anchor)
+image:
+  
+![Logo of CTE in NVSU](cted.png)
+
+* unordered list
+  + sub-item 1
+  + sub-item 2
+    - sub-sub-item 1
+    
+* item 2
+  1. ordered list
+  2. item 2
+      i) sub-item 1
+      ii) sub-sub-item 1
+      
+(@) Liwag
+
+(@) Katherine
+
+Term 1
+
+: Definition 1
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+| 12 | 12 | 12 | 12 |
+| 123 | 123 | 123 | 123 |
+| 1 | 1 | 1 | 1 |
+
+- Kath
+
+- Kath
+
+***
+
+A footnote [^1]
+
+library(tidyverse)
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ, y = hwy))
+
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ, y = hwy, color = class))
+
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ, y = hwy, size = class))
+
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
+
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ, y = hwy, shape = class))
+
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
+
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ, y = hwy)) +
+facet_wrap(~ class, nrow = 2)
+
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ, y = hwy)) +
+facet_grid(drv ~ cyl)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
